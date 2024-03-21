@@ -19,4 +19,4 @@ function loadData(n::Int64, m::Int64)
     end
     return A;
 end
-println(loadData(10, 4))
+#println(loadData(10, 4))
