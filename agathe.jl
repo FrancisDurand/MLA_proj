@@ -64,6 +64,7 @@ function plans_coupants_projection(n, m; Gamma = 3, c = 1000)
     x_real = [0 for i in 1:n]
 
     condition = true
+    iter = 0
     while condition
         best_t = Inf
         best_ind_a = 0
@@ -101,8 +102,9 @@ function plans_coupants_projection(n, m; Gamma = 3, c = 1000)
             println("x_bord = ", x_bord)
             d = x_bord - x_real
             println("d = ", d)  
+            iter += 1
         end
     end
-
+    println("iter = ", iter)
     return x_real, sum(x_real[i] for i in 1:n)
 end
